@@ -20,11 +20,27 @@ namespace Udemy.WPF.Calculator
     /// </summary>
     public partial class MainWindow : Window
     {
+        double lastNumber, result;
         public MainWindow()
         {
             InitializeComponent();
 
-            resultLabel.Content = "14321";
+            acButton.Click += AcButton_Click;
+            negativeButton.Click += NegativeButton_Click;
+        }
+
+        private void NegativeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(),out lastNumber))
+            {
+                lastNumber = lastNumber * -1;
+                resultLabel.Content=lastNumber.ToString();
+            }
+        }
+
+        private void AcButton_Click(object sender, RoutedEventArgs e)
+        {
+            resultLabel.Content = "0";
         }
 
         private void sevenButton_Click(object sender, RoutedEventArgs e)
@@ -37,6 +53,91 @@ namespace Udemy.WPF.Calculator
             {
                 resultLabel.Content = $"{resultLabel.Content}7";
             }
+        }
+
+        private void negativeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void perecentageButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sharingButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void eightButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void nineButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void multiplyButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void fourButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void fiveButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void sixButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void minusButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void oneButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void twoButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void threeButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void plusButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void zeroButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void dotButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void equalButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
