@@ -27,6 +27,16 @@ namespace Udemy.WPF.Calculator
 
             acButton.Click += AcButton_Click;
             negativeButton.Click += NegativeButton_Click;
+            perecentageButton.Click += PerecentageButton_Click;
+        }
+
+        private void PerecentageButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
+            {
+                lastNumber = lastNumber / 100;
+                resultLabel.Content = lastNumber.ToString();
+            }
         }
 
         private void NegativeButton_Click(object sender, RoutedEventArgs e)
