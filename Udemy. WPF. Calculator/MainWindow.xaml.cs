@@ -24,7 +24,7 @@ namespace Udemy.WPF.Calculator
         SelectedOperator selectedOperator;
         public MainWindow()
         {
-            InitializeComponent();  
+            InitializeComponent();
 
         }
 
@@ -51,8 +51,8 @@ namespace Udemy.WPF.Calculator
                 resultLabel.Content=result.ToString();
             }
         }
-        //šis metodas prasisuka du kartus, todėl procentinėje reikšmėje atsiranda 0,000.
-        private void PerecentageButton_Click(object sender, RoutedEventArgs e)
+        
+        private void PercentageButton_Click(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
             {
@@ -148,6 +148,11 @@ namespace Udemy.WPF.Calculator
 
         public static double Divide(double n1, double n2)
         {
+            if (n2 == 0)
+            {
+                MessageBox.Show("Division by 0 is not suproted", "Wrong operation", MessageBoxButton.OK, MessageBoxImage.Error);
+                return 0;
+            }
             return n1 / n2;
         }
     }

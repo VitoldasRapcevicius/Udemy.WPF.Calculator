@@ -38,8 +38,8 @@
                 Margin="5"
                 Grid.Row="1"
                 Grid.Column="1"/>
-        <Button x:Name="perecentageButton"
-                Click="PerecentageButton_Click"
+        <Button x:Name="percentageButton"
+                Click="PercentageButton_Click"
                 Content="%"
                 Margin="5"
                 Grid.Row="1"
