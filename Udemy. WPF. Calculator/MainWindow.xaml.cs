@@ -26,11 +26,6 @@ namespace Udemy.WPF.Calculator
         {
             InitializeComponent();  
 
-            acButton.Click += AcButton_Click;
-            negativeButton.Click += NegativeButton_Click;
-            perecentageButton.Click += PerecentageButton_Click;
-            equalButton.Click += EqualButton_Click;
-            pointButton.Click += PointButton_Click;
         }
 
         private void EqualButton_Click(object sender, RoutedEventArgs e)
@@ -56,7 +51,7 @@ namespace Udemy.WPF.Calculator
                 resultLabel.Content=result.ToString();
             }
         }
-
+        //šis metodas prasisuka du kartus, todėl procentinėje reikšmėje atsiranda 0,000.
         private void PerecentageButton_Click(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(resultLabel.Content.ToString(), out lastNumber))
@@ -65,7 +60,7 @@ namespace Udemy.WPF.Calculator
                 resultLabel.Content = lastNumber.ToString();
             }
         }
-
+        //šis metodas prasisuka du kartus, todėl vietoje minuso atsiranda pliusas.
         private void NegativeButton_Click(object sender, RoutedEventArgs e)
         {
             if (double.TryParse(resultLabel.Content.ToString(),out lastNumber))

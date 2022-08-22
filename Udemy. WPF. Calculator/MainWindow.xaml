@@ -33,13 +33,13 @@
                 Margin="5"
                 Grid.Row="1"/>
         <Button x:Name="negativeButton"
-                Click="negativeButton_Click"
+                Click="NegativeButton_Click"
                 Content="+/-"
                 Margin="5"
                 Grid.Row="1"
                 Grid.Column="1"/>
         <Button x:Name="perecentageButton"
-                Click="perecentageButton_Click"
+                Click="PerecentageButton_Click"
                 Content="%"
                 Margin="5"
                 Grid.Row="1"
@@ -118,7 +118,7 @@
                 Content="+"
                 Margin="5"
                 Grid.Row="4"
-                Grid.Column="4"/>
+                Grid.Column="3"/>
         <Button x:Name="zeroButton"
                 Click="NumberButton_Click"
                 Content="0"
@@ -126,17 +126,17 @@
                 Grid.Row="5"
                 Grid.ColumnSpan="2"/>
         <Button x:Name="pointButton"
-                Click="pointButton_Click"
+                Click="PointButton_Click"
                 Content="."
                 Margin="5"
                 Grid.Row="5"
                 Grid.Column="2"/>
         <Button x:Name="equalButton"
-                Click="equalButton_Click"
+                Click="EqualButton_Click"
                 Content="="
                 Margin="5"
                 Grid.Row="5"
-                Grid.Column="4"/>
+                Grid.Column="3"/>
     </Grid>
 </Window>
  
